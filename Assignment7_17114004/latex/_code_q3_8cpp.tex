@@ -1,0 +1,124 @@
+\hypertarget{_code_q3_8cpp}{}\doxysection{Code\+Q3.\+cpp File Reference}
+\label{_code_q3_8cpp}\index{CodeQ3.cpp@{CodeQ3.cpp}}
+
+
+This file contains the code for creating a server which listens at the port 8000.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$queue$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for Code\+Q3.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_code_q3_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structpnode}{pnode}}
+\item 
+class \mbox{\hyperlink{class_coder}{Coder}}
+\item 
+struct \mbox{\hyperlink{struct_node}{Node}}
+\begin{DoxyCompactList}\small\item\em A Tree node. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structcomp}{comp}}
+\begin{DoxyCompactList}\small\item\em Comparison object to be used to order the heap. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_code_q3_8cpp_a4fc34b120ed3bd1120c1eb36abbcd6af}\label{_code_q3_8cpp_a4fc34b120ed3bd1120c1eb36abbcd6af}} 
+\#define \mbox{\hyperlink{_code_q3_8cpp_a4fc34b120ed3bd1120c1eb36abbcd6af}{NL}}~\char`\"{}\textbackslash{}n\char`\"{}
+\begin{DoxyCompactList}\small\item\em headers \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_code_q3_8cpp_a59a570302cc9e828862e6ccef054ee83}\label{_code_q3_8cpp_a59a570302cc9e828862e6ccef054ee83}} 
+\mbox{\hyperlink{struct_node}{Node}} $\ast$ \mbox{\hyperlink{_code_q3_8cpp_a59a570302cc9e828862e6ccef054ee83}{get\+Node}} (char ch, int freq, \mbox{\hyperlink{struct_node}{Node}} $\ast$left, \mbox{\hyperlink{struct_node}{Node}} $\ast$right)
+\begin{DoxyCompactList}\small\item\em Function to allocate a new tree node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_code_q3_8cpp_ae606d9bfa95e3b09c40e0acd0f80cca6}{encode}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$root, string str, unordered\+\_\+map$<$ char, string $>$ \&huffman\+Code)
+\item 
+void \mbox{\hyperlink{_code_q3_8cpp_ad015e9dd630dac908618fc55678c453f}{decode}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$root, int \&index, string str)
+\begin{DoxyCompactList}\small\item\em traverse the Huffman Tree and decode the encoded string \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_code_q3_8cpp_ac41d74d3cd9e5d7a2fe10c7ed6b7c4ec}{build\+Huffman\+Tree}} (string text)
+\begin{DoxyCompactList}\small\item\em Builds Huffman Tree and decode given input text. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_code_q3_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Huffman coding algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the code for creating a server which listens at the port 8000. 
+
+\begin{DoxyAuthor}{Author}
+Abhishek Rathod 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+1/10/19 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_code_q3_8cpp_ac41d74d3cd9e5d7a2fe10c7ed6b7c4ec}\label{_code_q3_8cpp_ac41d74d3cd9e5d7a2fe10c7ed6b7c4ec}} 
+\index{CodeQ3.cpp@{CodeQ3.cpp}!buildHuffmanTree@{buildHuffmanTree}}
+\index{buildHuffmanTree@{buildHuffmanTree}!CodeQ3.cpp@{CodeQ3.cpp}}
+\doxysubsubsection{\texorpdfstring{buildHuffmanTree()}{buildHuffmanTree()}}
+{\footnotesize\ttfamily void build\+Huffman\+Tree (\begin{DoxyParamCaption}\item[{string}]{text }\end{DoxyParamCaption})}
+
+
+
+Builds Huffman Tree and decode given input text. 
+
+count frequency of appearance of each character and store it in a map
+
+Create a priority queue to store live nodes of Huffman tree;
+
+Create a leaf node for each character and add it to the priority queue.
+
+do till there is more than one node in the queue
+
+Remove the two nodes of highest priority (lowest frequency) from the queue
+
+Create a new internal node with these two nodes as children and with frequency equal to the sum of the two nodes\textquotesingle{} frequencies. Add the new node to the priority queue.
+
+root stores pointer to root of Huffman Tree
+
+traverse the Huffman Tree and store Huffman Codes in a map. Also prints them
+
+print encoded string
+
+traverse the Huffman Tree again and this time decode the encoded string\mbox{\Hypertarget{_code_q3_8cpp_ad015e9dd630dac908618fc55678c453f}\label{_code_q3_8cpp_ad015e9dd630dac908618fc55678c453f}} 
+\index{CodeQ3.cpp@{CodeQ3.cpp}!decode@{decode}}
+\index{decode@{decode}!CodeQ3.cpp@{CodeQ3.cpp}}
+\doxysubsubsection{\texorpdfstring{decode()}{decode()}}
+{\footnotesize\ttfamily void decode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{root,  }\item[{int \&}]{index,  }\item[{string}]{str }\end{DoxyParamCaption})}
+
+
+
+traverse the Huffman Tree and decode the encoded string 
+
+found a leaf node\mbox{\Hypertarget{_code_q3_8cpp_ae606d9bfa95e3b09c40e0acd0f80cca6}\label{_code_q3_8cpp_ae606d9bfa95e3b09c40e0acd0f80cca6}} 
+\index{CodeQ3.cpp@{CodeQ3.cpp}!encode@{encode}}
+\index{encode@{encode}!CodeQ3.cpp@{CodeQ3.cpp}}
+\doxysubsubsection{\texorpdfstring{encode()}{encode()}}
+{\footnotesize\ttfamily void encode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{root,  }\item[{string}]{str,  }\item[{unordered\+\_\+map$<$ char, string $>$ \&}]{huffman\+Code }\end{DoxyParamCaption})}
+
+traverse the Huffman Tree and store Huffman Codes in a map. found a leaf node\mbox{\Hypertarget{_code_q3_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{_code_q3_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{CodeQ3.cpp@{CodeQ3.cpp}!main@{main}}
+\index{main@{main}!CodeQ3.cpp@{CodeQ3.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Huffman coding algorithm. 
+
+Calling encoding or decoding subroutine

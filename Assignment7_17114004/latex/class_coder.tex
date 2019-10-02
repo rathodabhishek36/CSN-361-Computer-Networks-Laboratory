@@ -1,0 +1,61 @@
+\hypertarget{class_coder}{}\doxysection{Coder Class Reference}
+\label{class_coder}\index{Coder@{Coder}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_coder_ae42aee8d7a9c7f8ddd1790074e0bf82a}{Encode}} (const char $\ast$input\+Filename, const char $\ast$output\+Filename)
+\begin{DoxyCompactList}\small\item\em codeword for each char \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_coder_abee79d8db7d0fb462d3f2e8636cee822}{Decode}} (const char $\ast$input\+Filename, const char $\ast$output\+Filename)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_coder_abee79d8db7d0fb462d3f2e8636cee822}\label{class_coder_abee79d8db7d0fb462d3f2e8636cee822}} 
+\index{Coder@{Coder}!Decode@{Decode}}
+\index{Decode@{Decode}!Coder@{Coder}}
+\doxysubsubsection{\texorpdfstring{Decode()}{Decode()}}
+{\footnotesize\ttfamily void Coder\+::\+Decode (\begin{DoxyParamCaption}\item[{const char $\ast$}]{input\+Filename,  }\item[{const char $\ast$}]{output\+Filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Opening input file
+
+Loading codes
+
+skip end line
+
+Opening output file
+
+Decoding and outputing to file
+
+Cleaning\mbox{\Hypertarget{class_coder_ae42aee8d7a9c7f8ddd1790074e0bf82a}\label{class_coder_ae42aee8d7a9c7f8ddd1790074e0bf82a}} 
+\index{Coder@{Coder}!Encode@{Encode}}
+\index{Encode@{Encode}!Coder@{Coder}}
+\doxysubsubsection{\texorpdfstring{Encode()}{Encode()}}
+{\footnotesize\ttfamily void Coder\+::\+Encode (\begin{DoxyParamCaption}\item[{const char $\ast$}]{input\+Filename,  }\item[{const char $\ast$}]{output\+Filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+codeword for each char 
+
+frequency for each char from input text
+
+Opening input file
+
+Counting chars
+
+Building decreasing freqs table
+
+Encoding
+
+Opening output file
+
+Outputing ptable and codes
+
+Outputing encoded text
+
+Cleaning
+
+Closing files
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_code_q3_8cpp}{Code\+Q3.\+cpp}}\end{DoxyCompactItemize}

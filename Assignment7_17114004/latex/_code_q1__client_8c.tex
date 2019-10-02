@@ -1,0 +1,93 @@
+\hypertarget{_code_q1__client_8c}{}\doxysection{Code\+Q1\+\_\+client.\+c File Reference}
+\label{_code_q1__client_8c}\index{CodeQ1\_client.c@{CodeQ1\_client.c}}
+
+
+This file is used for the client side creation of node using T\+CP protocol and I\+Pv4 and to send and recieve messages through the port and also to connect with other client sockets.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for Code\+Q1\+\_\+client.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_code_q1__client_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_code_q1__client_8c_a614217d263be1fb1a5f76e2ff7be19a2}\label{_code_q1__client_8c_a614217d263be1fb1a5f76e2ff7be19a2}} 
+\#define {\bfseries P\+O\+RT}~8080
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_code_q1__client_8c_a47d76e01efa6c16976d40f94208c03c3}\label{_code_q1__client_8c_a47d76e01efa6c16976d40f94208c03c3}} 
+int \mbox{\hyperlink{_code_q1__client_8c_a47d76e01efa6c16976d40f94208c03c3}{parity\+\_\+true}} (char $\ast$buff)
+\begin{DoxyCompactList}\small\item\em parity checker \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_code_q1__client_8c_a97878ec68fad8223df0ba4aa0e008acb}\label{_code_q1__client_8c_a97878ec68fad8223df0ba4aa0e008acb}} 
+int \mbox{\hyperlink{_code_q1__client_8c_a97878ec68fad8223df0ba4aa0e008acb}{checkstr}} (char $\ast$c)
+\begin{DoxyCompactList}\small\item\em checks if string is even parity \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_code_q1__client_8c_afe1ffd6ee175c403aa42c17f63ea2516}\label{_code_q1__client_8c_afe1ffd6ee175c403aa42c17f63ea2516}} 
+char $\ast$ \mbox{\hyperlink{_code_q1__client_8c_afe1ffd6ee175c403aa42c17f63ea2516}{xor}} (char $\ast$a, char $\ast$b)
+\begin{DoxyCompactList}\small\item\em makes xor of 2 strings \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_code_q1__client_8c_af3b2adb88206516ad8c9633c923178a2}\label{_code_q1__client_8c_af3b2adb88206516ad8c9633c923178a2}} 
+char $\ast$ \mbox{\hyperlink{_code_q1__client_8c_af3b2adb88206516ad8c9633c923178a2}{update\+\_\+\+C\+RC}} (char $\ast$message, char $\ast$divi1, int len)
+\begin{DoxyCompactList}\small\item\em C\+RC code block. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_code_q1__client_8c_a87e70cc30e369d2ff3fe318e785f1002}\label{_code_q1__client_8c_a87e70cc30e369d2ff3fe318e785f1002}} 
+int \mbox{\hyperlink{_code_q1__client_8c_a87e70cc30e369d2ff3fe318e785f1002}{check\+\_\+rem}} (char $\ast$buff)
+\begin{DoxyCompactList}\small\item\em returns the remainder of the string given as input \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_code_q1__client_8c_a4dffb20d4629f333c68b8394a1240c68}\label{_code_q1__client_8c_a4dffb20d4629f333c68b8394a1240c68}} 
+char $\ast$ \mbox{\hyperlink{_code_q1__client_8c_a4dffb20d4629f333c68b8394a1240c68}{add\+\_\+bin}} (char $\ast$m1, char $\ast$m2, int len)
+\begin{DoxyCompactList}\small\item\em adds 2 binary strings \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_code_q1__client_8c_abf9e6b7e6f15df4b525a2e7705ba3089}{main}} (int argc, char const $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file is used for the client side creation of node using T\+CP protocol and I\+Pv4 and to send and recieve messages through the port and also to connect with other client sockets. 
+
+\begin{DoxyAuthor}{Author}
+Abhishek Rathod (17114004)
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+1/10/2019 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_code_q1__client_8c_abf9e6b7e6f15df4b525a2e7705ba3089}\label{_code_q1__client_8c_abf9e6b7e6f15df4b525a2e7705ba3089}} 
+\index{CodeQ1\_client.c@{CodeQ1\_client.c}!main@{main}}
+\index{main@{main}!CodeQ1\_client.c@{CodeQ1\_client.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char const $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+This is the main method and all the functions used to create socket and to communicate with other sockets are implemented in this method. \begin{DoxyAuthor}{Author}
+Abhishek Rathod (17114004) 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+This is used to store the file descriptors of the socket.
+
+This will contain the return value when message will be sent by the client.
+
+This will store various socket attributes.
+
+Creating a socket.
+
+Assigning various attribute values to the sockaddr\+\_\+in struct.
+
+Convert I\+Pv4 addresses from text to binary form
+
+Connecting with the server socket.
+
+Sending the message to the sever socket.
