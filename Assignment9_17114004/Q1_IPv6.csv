@@ -1,0 +1,2 @@
+Address A,Address B,Packets,Bytes,Packets A → B,Bytes A → B,Packets B → A,Bytes B → A,Rel Start,Duration,Bits/s A → B,Bits/s B → A
+fe80::112d:a32d:9c97:8a2,ff02::fb,2,214,2,214,0,0,221.197761107,512.002181385,3.34373575395504,0
